@@ -1,0 +1,228 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #FFFFFFA6;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* color */
+/* Trắng tinh khiết (#FFFFFF): Rất phổ biến và dễ đọc trên nền đen.
+Xám nhạt (#CCCCCC): Giảm độ tương phản một chút so với trắng, nhưng vẫn dễ đọc.
+Vàng nhạt (#FFD700): Mang lại cảm giác ấm áp và nổi bật.
+Màu xanh ngọc (#00FFFF): Một màu sắc tươi sáng, tạo cảm giác hiện đại.
+Hồng đậm (#FF69B4): Một màu sắc tươi sáng và nổi bật, tạo điểm nhấn mạnh.
+Xanh lá cây nhạt (#00FF00): Màu xanh tươi sáng, dễ đọc trên nền đen.
+Đỏ nhạt (#FF6347): Một màu sắc ấm áp, nổi bật và dễ nhận biết.
+Màu cam (#FFA500): Một màu sắc ấm áp, dễ nhìn thấy và nổi bật. */
+/* css */
+body{
+    background-color: #343434;
+    color: #FFFFFFA6;
+    font-family: 'consolas';
+    font-size: 16px;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    margin-top: 10px;
+    line-height: 60px;
+}
+
+.search{
+    position: relative;
+    width: 120px;
+    padding-right: 30px;
+}
+.search-input{
+    width: 100%;
+    border-color: #000;
+    height: 25px;
+    display: none;
+    transition: opacity 0.5s ease;
+    transform: scale(0.9);
+}
+.search-input.show {
+    display: block;
+    opacity: 1;
+    transform: scale(1);
+}
+.search-input:focus{
+    outline: none;
+    box-shadow: 0 0 8px rgba(102, 175, 233, 0.6);
+}
+.search-button{
+    position: absolute;
+    cursor: pointer;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.search-button:hover{
+    opacity: 0.9;
+    color: #FFA500 !important;
+}
+
+.home{
+    color: #FF6347;
+    font-size: 30px;
+    padding: 5px 30px;
+    line-height: 50px;
+    width: 100px;
+}
+
+.nav-list{
+    display: flex;
+    justify-content: space-between;
+    width: 33%;
+}
+.nav-item a:hover{
+    opacity: 0.9;
+    color: #FFA500 ;
+}
+.nav-item a{
+    padding: 12px;
+}
+.nav-item i{
+    padding-left: 10px;
+}
+.nav-product {
+    position: relative;
+    z-index: 1;
+}
+
+.nav-product-list {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    position: absolute;
+    top: 50px;
+    box-shadow: 0 0 3px #ccccccad;
+}
+
+.nav-product:hover .nav-product-list {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+.nav-product-item{
+    line-height: 40px;  
+    width: 100px;
+    text-align: left;
+}
+.nav-product-item a{
+    padding: 12px 46px 12px 12px;
+    width: 100px;
+}
+
+/* main */
+#main{
+    padding: 120px 0;
+    color: #fff!important;
+    text-align: center;
+    font-size: 18px;
+}
+.main-title{
+    font-size: 35px;
+    padding: 60px 0;
+    color: #67754d;
+}
+#main p{
+    padding: 10px 0;
+}
+/* css page */
+.page-aboutme,.page-product{
+    padding: 30px;
+}
+/* page about */
+.page-aboutme{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 100px 30px;
+}
+.info-title{
+    color: #FFA500;
+    font-weight: 600;
+    opacity: 0.8;
+}
+/* page-product */
+
+.product-title{
+    color: #FFA500;
+    font-weight: 600;
+    opacity: 0.8;
+    font-size: 30px;
+    text-align: center;
+}
+.product-options{
+    display: flex;
+    list-style: 30px;
+    justify-content: space-between;
+    width: 240px;
+    align-items: center;
+    line-height: 40px;
+    margin-bottom: 40px;
+}
+.product-option_first{
+    color: #fff;
+}
+.product-option button{
+    cursor: pointer;
+    padding: 4px;
+    font-size: 12px;
+    border-radius: 8px ;
+}
+.page-product-item{
+    height: 200px;
+}
+.selected{
+    background-color: #FF6347 !important;
+}
+.hidden{
+    display: none;
+}

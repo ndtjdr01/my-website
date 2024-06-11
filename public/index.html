@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <title>React App</title>
+  <link rel="stylesheet" href="./style.css">
+  <link
+    href="https://fonts.googleapis.com/css?family=Dancing+Script|Itim|Lobster|Montserrat:500|Noto+Serif|Nunito|Patrick+Hand|Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i|Roboto+Slab|Saira"
+    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/891b0e67f4.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header id="header">
+    <div class="header">
+      <a class="home" page="page-home" href="#" onclick="changePage(this)">NDT</a>
+      <ul class="nav-list">
+        <li class="nav-item"><a href="#" page="page-aboutme" onclick="changePage(this)">About me</a></li>
+        <li class="nav-item nav-product">
+          <a href="#" onclick="changePage(this)" page="page-product">Product<i class="fa-solid fa-caret-down"></i></a>
+          <ul class="nav-product-list">
+            <li class="nav-product-item" filter="game"><a href="">Game</a></li>
+            <li class="nav-product-item" filter="data"><a href="">Data</a></li>
+            <li class="nav-product-item" filter="web"><a href="">Web</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="search">
+        <input type="text" placeholder="Tìm kiếm" class="search-input">
+        <i class="fa-solid fa-magnifying-glass search-button"></i>
+      </div>
+    </div>
+  </header>
+  <main id="main" class="page page-home">
+    <h1 class="main-title">Welcome to my website!</h1>
+    <p class="main-desciption">This website contain content about me: Nguyễn Doãn Thành</p>
+    <p class="main-subdescription">Thank you to travel here!</p>
+  </main>
+  <div class="page-aboutme page hidden">
+    <div class="page-aboutme_info-basic">
+      <div class="info-title">INFO</div>
+      <p>Name: Nguyễn Doãn Thành</p>
+      <p>Birth: 16/12/2004</p>
+      <p>From: Viet Nam, Ha Noi, Quoc Oai</p>
+      <p>Phone: 0346388712</p>
+      <p>Email: thanh161204@gmail.com</p>
+    </div>
+  </div>
+  <div class="page-product page hidden">
+    <div class="product-container">
+      <div class="product-title">PRODUCT</div>
+      <div class="product-options">
+        <div class="product-option_first">Filter:</div>
+        <div class="product-option"><button class="product-option_button" filter="all"
+            onclick="filter(this)">ALL</button></div>
+        <div class="product-option"><button class="product-option_button" filter="game"
+            onclick="filter(this)">GAME</button></div>
+        <div class="product-option"><button class="product-option_button" filter="data"
+            onclick="filter(this)">DATA</button></div>
+        <div class="product-option"><button class="product-option_button" filter="web"
+            onclick="filter(this)">WEB</button></div>
+      </div>
+      <div class="page-product-item game">
+        <div class="product-gametitle">GAME:</div>
+        <p>This is game data</p>
+      </div>
+      <div class="page-product-item data">
+        <div class="product-data-title">DATA:</div>
+        <p>This is data content</p>
+      </div>
+      <div class="page-product-item web">
+        <div class="product-web">WEB:</div>
+        <p>this is web content</p>
+      </div>
+    </div>
+  </div>
+  <footer id="footer"></footer>
+  <script src="./main.js"></script>
+
+  <div id="root"></div>
+</body>
+
+</html>
